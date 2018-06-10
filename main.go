@@ -62,7 +62,7 @@ func refresh(pusher *Pusher) (err error) {
 
 	points := make([]*client.Point, len(airData.Parameters))
 	for i, parameter := range airData.Parameters {
-		loc, err := time.LoadLocation("europe/moscow")
+		loc, err := time.LoadLocation("Europe/Moscow")
 		if err != nil {
 			return err
 		}
