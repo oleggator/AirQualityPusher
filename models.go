@@ -1,8 +1,8 @@
 package main
 
 import (
-	"time"
 	"log"
+	"time"
 )
 
 type JSONTime time.Time

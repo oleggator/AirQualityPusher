@@ -1,16 +1,16 @@
 package main
 
 import (
-	"net/http"
-	"io/ioutil"
-	"fmt"
-	"log"
-	"net/url"
 	"encoding/json"
+	"fmt"
 	"github.com/influxdata/influxdb/client/v2"
 	"github.com/jasonlvhit/gocron"
-	"time"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"net/url"
 	"os"
+	"time"
 )
 
 func main() {
