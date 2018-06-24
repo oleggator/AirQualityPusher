@@ -28,8 +28,8 @@ func main() {
 	password := os.Getenv("DB_PASSWORD")
 
 	pusher, err := NewPusher(PusherConfig{
-		DB: db,
-		Addr: addr,
+		DB:       db,
+		Addr:     addr,
 		Username: username,
 		Password: password,
 	})
@@ -49,7 +49,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	<- gocron.Start()
+	<-gocron.Start()
 }
 
 func refresh(pusher *Pusher) (err error) {
@@ -73,9 +73,9 @@ func refresh(pusher *Pusher) (err error) {
 		}
 
 		tags := map[string]string{
-			"name": parameter.Name,
+			"name":             parameter.Name,
 			"chemical_formula": parameter.ChemicalFormula,
-			"class": parameter.Class,
+			"class":            parameter.Class,
 		}
 
 		fields := map[string]interface{}{

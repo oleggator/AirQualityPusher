@@ -7,13 +7,13 @@ import (
 )
 
 type Pusher struct {
-	c client.Client
+	c      client.Client
 	config PusherConfig
 }
 
 type PusherConfig struct {
-	DB string
-	Addr string
+	DB       string
+	Addr     string
 	Username string
 	Password string
 }
@@ -22,7 +22,7 @@ func NewPusher(config PusherConfig) (pusher Pusher, err error) {
 	pusher.config = config
 
 	pusher.c, err = client.NewHTTPClient(client.HTTPConfig{
-		Addr: config.Addr,
+		Addr:     config.Addr,
 		Username: config.Username,
 		Password: config.Password,
 	})

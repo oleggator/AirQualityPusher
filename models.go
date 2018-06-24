@@ -19,14 +19,14 @@ func (jt *JSONTime) UnmarshalJSON(b []byte) error {
 }
 
 type Parameter struct {
-	Title           string   `json:"parametername"`
-	ChemicalFormula string   `json:"chemicalFormula"`
-	Name            string   `json:"name"`
-	Class           string   `json:"class"`
-	Concentration   float32  `json:"modifyav"`
-	Norma1          float32  `json:"norma"`
-	Norma2          float32  `json:"norma_2"`
-	TimePoint       string   `json:"dateTime"`
+	Title           string  `json:"parametername"`
+	ChemicalFormula string  `json:"chemicalFormula"`
+	Name            string  `json:"name"`
+	Class           string  `json:"class"`
+	Concentration   float32 `json:"modifyav"`
+	Norma1          float32 `json:"norma"`
+	Norma2          float32 `json:"norma_2"`
+	TimePoint       string  `json:"dateTime"`
 }
 
 type AirData struct {
